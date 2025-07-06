@@ -47,7 +47,7 @@ export default function Home() {
           nombre: "Eden Hazard",
           Altura: "1.75",
           Peso: "74",
-          foto: "/imagenes/hazard.jpg", // cambia por la ruta que descargues
+          foto: "/imagenes/hazard.jpg", 
         },
         {
           id: 2,
