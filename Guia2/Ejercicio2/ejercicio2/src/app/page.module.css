@@ -1,0 +1,17 @@
+.main { display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding:
+6rem; min-height: 100vh;
+}
+.container__list { list-style-type: none; padding: 0;
+}
+
+.list {
+margin-bottom: 5px;
+}
+
+.title { margin: 20px 0; border: 0;
+border-top: 1px solid #ccc;
+}
+
+
+.nameclub { margin: 20px 0; border: 0;
+border-top: 1px solid rgb(29, 84, 185); } 
