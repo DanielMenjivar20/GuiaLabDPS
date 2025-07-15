@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 export default function Modal({ isOpen, onClose, children }) {
   useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
+    function handleEsc(e) {
+      if (e.key === 'Escape') onClose();
+    }
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
   }, [onClose]);
 
   if (!isOpen) return null;
@@ -14,20 +14,44 @@ export default function Modal({ isOpen, onClose, children }) {
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
+      style={{
+        position: 'fixed',
+        inset: 0,
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000
+      }}
     >
       <div
-        onClick={(e) => e.stopPropagation()} 
-        className="bg-white rounded-2xl p-6 w-[90%] max-w-lg shadow-xl relative animate-fade-in"
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          backgroundColor: 'white',
+          borderRadius: 8,
+          padding: 20,
+          maxWidth: 400,
+          width: '90%',
+          position: 'relative'
+        }}
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-4 text-2xl text-gray-500 hover:text-black"
+          style={{
+            position: 'absolute',
+            top: 10,
+            right: 10,
+            fontSize: 18,
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer'
+          }}
         >
-          ✕
+          ×
         </button>
         {children}
       </div>
     </div>
   );
 }
+

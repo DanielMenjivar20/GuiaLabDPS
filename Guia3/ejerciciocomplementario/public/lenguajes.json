@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "JavaScript",
+    "descripcion": "JavaScript es un lenguaje de programación ampliamente utilizado para el desarrollo web, que permite crear páginas web dinámicas e interactivas. Se ejecuta principalmente en el navegador, pero también se usa en servidores gracias a entornos como Node.js. Es fundamental para la construcción de interfaces de usuario modernas y aplicaciones web complejas."
+  },
+  {
+    "id": 2,
+    "nombre": "Python",
+    "descripcion": "Python es conocido por su sintaxis clara, legible y sencilla, lo que lo hace ideal para principiantes y expertos por igual. Es un lenguaje versátil usado en desarrollo web, ciencia de datos, inteligencia artificial, automatización, análisis estadístico, y muchas otras áreas. Su gran ecosistema de bibliotecas y frameworks lo convierten en una herramienta poderosa para múltiples propósitos."
+  },
+  {
+    "id": 3,
+    "nombre": "Java",
+    "descripcion": "Java es un lenguaje de programación orientado a objetos ampliamente utilizado en el desarrollo de aplicaciones empresariales, aplicaciones móviles (especialmente Android), y sistemas integrados. Su filosofía de 'escribir una vez, correr en cualquier lugar' permite que el código Java se ejecute en múltiples plataformas, haciéndolo muy popular para aplicaciones de gran escala y sistemas distribuidos."
+  }
+]
+
