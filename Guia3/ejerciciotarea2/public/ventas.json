@@ -1,0 +1,32 @@
+[
+  {
+    "anio": 2023,
+    "mes": "Enero",
+    "ventas": 12000
+  },
+  {
+    "anio": 2023,
+    "mes": "Febrero",
+    "ventas": 15000
+  },
+  {
+    "anio": 2023,
+    "mes": "Marzo",
+    "ventas": 14000
+  },
+  {
+    "anio": 2024,
+    "mes": "Enero",
+    "ventas": 17000
+  },
+  {
+    "anio": 2024,
+    "mes": "Febrero",
+    "ventas": 16000
+  },
+  {
+    "anio": 2024,
+    "mes": "Marzo",
+    "ventas": 19000
+  }
+]
