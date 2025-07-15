@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "JavaScript",
+    "imagen": "/imagenes/javascript.png",
+    "descripcion": "JavaScript es un lenguaje de programación ampliamente utilizado para el desarrollo web."
+  },
+  {
+    "id": 2,
+    "nombre": "Python",
+    "imagen": "/imagenes/python.png",
+    "descripcion": "Python es conocido por su sintaxis clara y su versatilidad en ciencia de datos, web y automatización."
+  },
+  {
+    "id": 3,
+    "nombre": "Java",
+    "imagen": "/imagenes/java.png",
+    "descripcion": "Java es un lenguaje orientado a objetos muy usado en aplicaciones empresariales, móviles y web."
+  }
+]

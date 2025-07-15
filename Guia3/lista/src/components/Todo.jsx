@@ -1,14 +1,20 @@
-import React, {useState} from 'react'
-import styles from "../app/page.module.css"
+import React from "react";
+import styles from "../app/page.module.css";
 
-const Todo= ({todo, index, deleteTodo})=> {
-  return(
-    <>
+const Product = ({ producto, index, handleDelete }) => {
+  return (
     <div className={styles.list}>
-    <h3 className='Titulo3'>{todo}</h3>
-    <button className={styles.btn_delete} onClick={()=> deleteTodo(index)}>X</button>
+      <p>
+        <strong>{producto.nombre}</strong> - {producto.marca} <br />
+        Cantidad: {producto.cantidad} <br />
+        Precio: ${producto.precio} <br />
+        Subtotal: ${(producto.cantidad * producto.precio).toFixed(2)}
+      </p>
+      <button className={styles.btn_delete} onClick={() => handleDelete(index)}>
+        Eliminar
+      </button>
     </div>
-    </>
-  )
-}
-export default Todo
+  );
+};
+
+export default Product;
