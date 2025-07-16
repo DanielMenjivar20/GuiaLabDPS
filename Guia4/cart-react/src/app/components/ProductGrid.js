@@ -23,7 +23,7 @@ const products = [
  id: 3,
  title: 'Cuentos de Barro',
  price: 30,
- image: 'https://www.librosdelaballena.com/wp-content/uploads/2020/05/cuentosbarro-244x300.png',
+ image:  'https://www.librosdelaballena.com/wp-content/uploads/2020/05/cuentosbarro-244x300.png',
  quantity: 1
  },
  {
@@ -59,3 +59,4 @@ const ProductGrid = () => {
  </div>
  );
 };
+export default ProductGrid;
