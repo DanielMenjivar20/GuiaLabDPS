@@ -1,9 +1,19 @@
-import React from 'react';
-import {View, StyleSheet,Image, Text, ScrollView} from 'react-native';
+import React, { useState } from 'react';
+import {View, StyleSheet,Image, Text, ScrollView, Modal, Button, TouchableHighlight} from 'react-native';
 const App = () =>{
+  const[modalVisibleplaya, setModalVisibleplaya]=useState(false)
  return(
  <>
 <ScrollView >
+  <Modal transparent={true} animationType="slide" visible={modalVisibleplaya} onRequestClose={() =>{
+    alert('Modal cerrado');
+  }}>
+    <View style={style.vistaModal}>
+      <View style={style.Modal}>
+        <Text style={styles.subtitulo}Ir a la playa </Text>
+        <Text>¿Quieres ir a la playa?</Text>
+    </View>
+  </Modal>
  <View style={{flexDirection:'row'}} >
  <Image
  style={styles.banner}
@@ -59,6 +69,30 @@ const App = () =>{
         source={require('./src/img/mejores3.jpg')} />
       </View>
      </View>
+     <Text style={styles.titulo}>Rutas Turisticas</Text>
+     <View style={styles.listado}>
+      <View style={styles.listaItem}>
+        <Image
+        style={styles.mejores}
+        source={require('./src/img/ruta1.jpg')} />
+      </View>
+      <View style={styles.listaItem}>
+        <Image
+        style={styles.mejores}
+        source={require('./src/img/ruta2.jpg')} />
+      </View>
+      <View style={styles.listaItem}>
+        <Image
+        style={styles.mejores}
+        source={require('./src/img/ruta3.jpg')} />
+      </View>
+      <View style={styles.listaItem}>
+        <Image
+        style={styles.mejores}
+        source={require('./src/img/ruta4.jpg')} />
+      </View>
+
+     </View>
      </View>
 
 </ScrollView>
@@ -85,6 +119,14 @@ mejores:{
   width: '100%',
   height: 200,
   marginRight:5
+},
+listaItem:{
+  flexBasis:'49%'
+},
+listado:{
+  flexDirection:'row',
+  flexWrap:'wrap',
+  justifyContent:'space-between'
 }
 });
 export default App;
