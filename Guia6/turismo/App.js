@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import {View, StyleSheet,Image, Text, ScrollView, Modal, Button, TouchableHighlight} from 'react-native';
 const App = () =>{
-  const[modalVisibleplaya, setModalVisibleplaya]=useState(false)
+  const[modalVisibleplaya, setModalVisibleplaya]=useState(false);
  return(
  <>
 <ScrollView >
   <Modal transparent={true} animationType="slide" visible={modalVisibleplaya} onRequestClose={() =>{
-    alert('Modal cerrado');
+    alert('Modal has been closed');
   }}>
-    <View style={style.vistaModal}>
-      <View style={style.Modal}>
+    <View style={styles.vistaModal}>
+      <View style={styles.Modal}>
         <Text style={styles.subtitulo}>Ir a la playa </Text>
-        <Text>¿Quieres ir a la playa?</Text>
         <Text>¡El Salvador cuenta con hermosas playas a nivel Centroamerica</Text>
         <Button title="cerrar" onPress={()=>{setModalVisibleplaya(!modalVisibleplaya)}} ></Button>
     </View>
@@ -28,6 +27,7 @@ const App = () =>{
      <View style={styles.contenedor}>
          <Text style={styles.titulo}> Que hacer en el El Salvador</Text>
          <ScrollView horizontal>
+
           <View>
             <TouchableHighlight
             onPress={()=>{setModalVisibleplaya(!modalVisibleplaya)}}>
@@ -140,6 +140,10 @@ listado:{
   justifyContent:'space-between'
 },
 vistaModal:{
+  backgroundColor:'#000000aa',
+  flex: 1,
+},
+Modal:{
   backgroundColor:'#fff',
   margin: 50,
   padding: 40,
