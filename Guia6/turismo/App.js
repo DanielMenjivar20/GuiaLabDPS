@@ -10,8 +10,11 @@ const App = () =>{
   }}>
     <View style={style.vistaModal}>
       <View style={style.Modal}>
-        <Text style={styles.subtitulo}Ir a la playa </Text>
+        <Text style={styles.subtitulo}>Ir a la playa </Text>
         <Text>¿Quieres ir a la playa?</Text>
+        <Text>¡El Salvador cuenta con hermosas playas a nivel Centroamerica</Text>
+        <Button title="cerrar" onPress={()=>{setModalVisibleplaya(!modalVisibleplaya)}} ></Button>
+    </View>
     </View>
   </Modal>
  <View style={{flexDirection:'row'}} >
@@ -25,6 +28,14 @@ const App = () =>{
      <View style={styles.contenedor}>
          <Text style={styles.titulo}> Que hacer en el El Salvador</Text>
          <ScrollView horizontal>
+          <View>
+            <TouchableHighlight
+            onPress={()=>{setModalVisibleplaya(!modalVisibleplaya)}}>
+              <Image
+              style={styles.ciudad}
+              source={require('./src/img/actividad1.jpg')} />
+            </TouchableHighlight>
+          </View>
              <View>
                  <Image style={styles.ciudad}
                   source={require('./src/img/actividad1.jpg')} 
@@ -127,6 +138,18 @@ listado:{
   flexDirection:'row',
   flexWrap:'wrap',
   justifyContent:'space-between'
+},
+vistaModal:{
+  backgroundColor:'#fff',
+  margin: 50,
+  padding: 40,
+  borderRadius: 10,
+  flex: 1,
+},
+subtitulo:{
+  fontWeight:'bold',
+  fontSize:14,
+  justifyContent: "center"
 }
 });
 export default App;
